@@ -20,8 +20,8 @@ const TEMPLATE_URL = "template.png";
 
 const LINKEDIN_CONFIG = {
   orgId: "YOUR_ORG_ID",
-  certName: "Google StudyJam Certificate", 
-  orgName: "StudyJam Community",
+  certName: "Google cloud study jam'25 Certificate", // "Google StudyJam Certificate", // Google cloud study jam'25 Certificate
+  orgName: "GDG on Campus BCE Patna (Formerly GDSC)" // "StudyJam Community", // GDG on Campus BCE Patna (Formerly GDSC)
 };
 
 /* ---------------- UTILS ---------------- */
