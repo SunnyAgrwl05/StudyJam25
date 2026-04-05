@@ -18,8 +18,7 @@ import {
   Globe
 } from "lucide-react";
 
-/* ---------------- CONFIGURATION ---------------- */
-const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSujpfz4G0XtIuuQipAIu3Jp8EEs7KCKFasqVtTWMdyYarCfatOTAk3HbujOQ3PNvne3HiztYAkJUZ9/pub?output=csv"; 
+ //  CONFIGURATION
 const TEMPLATE_URL = "template.png"; 
 
 const LINKEDIN_CONFIG = {
@@ -138,11 +137,11 @@ export default function App() {
 
   const runVerification = async (id) => {
     try {
-      const res = await fetch(CSV_URL);
+     // const res = await fetch(CSV_URL);
       if (!res.ok) throw new Error("Network error fetching database.");
       
-      const text = await res.text();
-      const records = parseCSV(text);
+    //  const text = await res.text();
+    //  const records = parseCSV(text);
 
       const record = records.find(
         (r) => r.id === id.trim() || r.booking_id === id.trim()
@@ -175,18 +174,18 @@ export default function App() {
     setError("");
 
     try {
-      const res = await fetch(CSV_URL);
+     // const res = await fetch(CSV_URL);
       if (!res.ok) throw new Error("Failed to fetch participant data from the server.");
 
-      const text = await res.text();
-      const records = parseCSV(text);
+    //  const text = await res.text();
+    //  const records = parseCSV(text);
 
-      const record = records.find(
-        (r) => 
-          r.id === searchId.trim() || 
-          r.booking_id === searchId.trim() || 
-          r.email === searchId.trim()
-      );
+    //  const record = records.find(
+    //    (r) => 
+    //     r.id === searchId.trim() || 
+    //      r.booking_id === searchId.trim() || 
+    //     r.email === searchId.trim()
+    //  );
 
       if (!record) {
         throw new Error("Participant not found. Please check your ID or Email.");
@@ -506,7 +505,7 @@ export default function App() {
             <a href="https://www.linkedin.com/in/sunny-kumar-a06484297" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 text-slate-400 hover:text-cyan-400 hover:bg-white/10 hover:border-cyan-500/30 transition-all duration-300 group">
               <Linkedin className="w-4 h-4 group-hover:scale-110 transition-transform" />
             </a>
-            <a href="https://github.com/SunnyAgrwl05" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 text-slate-400 hover:text-white hover:bg-white/10 hover:border-white/30 transition-all duration-300 group">
+            <a href="https://github.com/SunnyAgrwl05 " className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 text-slate-400 hover:text-white hover:bg-white/10 hover:border-white/30 transition-all duration-300 group">
               <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
             </a>
             <a href="https://x.com/SunnyTechLead" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 text-slate-400 hover:text-blue-400 hover:bg-white/10 hover:border-blue-500/30 transition-all duration-300 group">
